@@ -13,22 +13,22 @@ module Blinky
     end
 
     it "cycles through all possible statuses" do
-      @blinky.should_receive(:building!).ordered
-      @blinky.should_receive(:sleep).ordered
-      @blinky.should_receive(:failure!).ordered
-      @blinky.should_receive(:sleep).ordered
-      @blinky.should_receive(:building!).ordered
-      @blinky.should_receive(:sleep).ordered
-      @blinky.should_receive(:warning!).ordered
-      @blinky.should_receive(:sleep).ordered
-      @blinky.should_receive(:building!).ordered
-      @blinky.should_receive(:sleep).ordered
-      @blinky.should_receive(:success!).ordered
-      @blinky.should_receive(:sleep).ordered
-      @blinky.should_receive(:off!).ordered
+      expect(@blinky).to receive(:building!).ordered
+      expect(@blinky).to receive(:sleep).ordered
+      expect(@blinky).to receive(:failure!).ordered
+      expect(@blinky).to receive(:sleep).ordered
+      expect(@blinky).to receive(:building!).ordered
+      expect(@blinky).to receive(:sleep).ordered
+      expect(@blinky).to receive(:warning!).ordered
+      expect(@blinky).to receive(:sleep).ordered
+      expect(@blinky).to receive(:building!).ordered
+      expect(@blinky).to receive(:sleep).ordered
+      expect(@blinky).to receive(:success!).ordered
+      expect(@blinky).to receive(:sleep).ordered
+      expect(@blinky).to receive(:off!).ordered
 
       @blinky.watch_test_server
     end
 
-  end  
+  end
 end
